@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Proyecto final</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Playfair+Display:700|Raleway:500.700'><link rel="stylesheet" href="./style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container">
+      <a class="navbar-brand text-light font-weight-bold" href="index.html">TomiAV</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="icon ion-md-menu lead text-light"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto nav navbar-nav pull-xs-right">
+          <li class="nav-item mr-2">
+            <a class="nav-link text-light" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item mr-3">
+            <a class="nav-link text-light" href="#servicios">Servicios</a>
+          </li>
+          <li class="nav-item mr-3">
+            <a class="nav-link text-light" href="#cotizador">Cotizador</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>  
+  <section id="hero-container" class="position-relative text-light">
+    <div id="hero-background"></div>
+      <div id="hero-content" class="container h-100">
+        <div class="row no-gutters h-100 d-flex">
+          <div id="hero-text" class="col-md-6 align-self-center">
+            <h1 class="display-1 font-weight-bold mb-4">Contanos tus ideas</h1>
+            <p class="lead mb-5">Llevamos a cabo la estrategia digital optima para la expanción de tu negocio
+            </p>
+            <a href="#" class="btn btn-primary">Comienza tu proyecto</a>
+          </div>
+         <div class="col-md-6 img-container align-self-center h-100">
+            <img src="img/001-removebg.png" id="hero-img" class="position-absolute">
+            
+          </div>
+        </div>
+      </div>
+  </section>
+ 
+
+<h1 class="title" id="servicios">Servicios</h1>
+
+<div id="app" class="contenedor">
+      <card data-image="img/eldavid.jpg">
+          <h1 slot="header">Social media</h1>
+          <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </card>
+      <card data-image="img/revista-codigo-pop-art-sturtevant.jpg">
+          <h1 slot="header">Google Ads</h1>
+          <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </card>
+      <card data-image="img/m.jpg">
+          <h1 slot="header">Analiticas</h1>
+          <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </card>
+      <card data-image="img/depositphotos_443687004-stock-photo-collage-with-plaster-antique-sculpture.jpg">
+          <h1 slot="header">Desarrollo web</h1>
+          <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </card>
+</div>
+
+  <main>
+    <div class="contenedor">
+      <video class="fm-video video-js vjs-16-9 vjs-big-play-centered" data-setup="{}" controls id="fm-video">
+        <source src="video/keyboard.mp4" type="video/mp4">
+      </video>
+    </div>
+  </main>
+
+
+
+
+<section>
+  <div class="container" id="cotizador">
+    <div class="row">
+      <div class="col-8">
+        <form id="form">
+          <input id="empresa" type="text" placeholder="Nombre de tu empresa" class="form-control my-2">
+          <input id="servicios" type="text" name="¿que servicios necesita?" placeholder="¿Que servicios necesita?(google ads? social media?" class="form-control my-2">
+          <button id="boton" class="btn btn-success" type="reset" onkeypress="capturarEnter(event);" onclick="capturar()">Agregar</button>
+        </form>
+      </div>
+      <div class="col-4">
+        <table class="table" id="tabla">
+      <thead class="thead.inverse">
+        <tr>
+          <th>Nombre de la empresa</th>
+          <th>¿Que servicios necesita?</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+  <script src="/js/jquery.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js'></script>
+  <script  src="./script.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    var reproductor = videojs('fm-video', {
+      fluid: true
+    });
+  </script>
+  
+
+</body>
+</html>
